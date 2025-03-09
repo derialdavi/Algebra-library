@@ -1,0 +1,2 @@
+- [ ] implement other operations functions;
+- [ ] write all tests and check if the algorithms are right;
