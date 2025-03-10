@@ -35,10 +35,45 @@ Complex_number from_polar_to_standard(Complex_number_polar_form z) {
    return standardized_form;
 }
 
-Complex_number add(Complex_number z1, Complex_number z2) {
+Complex_number add_standard_form(Complex_number z1, Complex_number z2) {
    Complex_number add_result;
    add_result.real_part = z1.real_part + z2.real_part;
    add_result.imaginary_part = z1.imaginary_part + z2.imaginary_part;
 
    return add_result;
+}
+
+Complex_number subtract_standard_form(Complex_number z1, Complex_number z2) {
+   Complex_number subtract_result;
+   subtract_result.real_part = z1.real_part - z2.real_part;
+   subtract_result.imaginary_part = z1.imaginary_part - z2.imaginary_part;
+
+   return subtract_result;
+}
+
+Complex_number multiply_standard_form(Complex_number z1, Complex_number z2) {
+   Complex_number multiply_result;
+
+   double first = z1.real_part * z2.real_part;
+   double second = z1.real_part * z2.imaginary_part;
+   double third = z1.imaginary_part * z2.real_part;
+   double fourth = (z1.imaginary_part * z2.imaginary_part) * (-1);
+
+   multiply_result.real_part = first + fourth;
+   multiply_result.imaginary_part = second + third;
+
+   return multiply_result;
+}
+
+Complex_number divide_standard_form(Complex_number z1, Complex_number z2) {
+   Complex_number divide_result;
+
+   Complex_number conjucate = get_conjucate(z2);
+   Complex_number numerator = multiply_standard_form(conjucate, z1);
+   Complex_number denominatore = multiply_standard_form(conjucate, z2);
+
+   divide_result.real_part = numerator.real_part / denominatore.real_part;
+   divide_result.imaginary_part = numerator.imaginary_part / denominatore.real_part;
+
+   return divide_result;
 }

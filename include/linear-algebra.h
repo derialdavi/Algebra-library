@@ -30,10 +30,10 @@ double get_absolute_value(Complex_number);
 Complex_number get_multiplicative_inverse(Complex_number);
 Complex_number from_polar_to_standard(Complex_number_polar_form);
 
-Complex_number add(Complex_number, Complex_number);
-Complex_number subtract(Complex_number, Complex_number); // still to implement
-Complex_number multiply(Complex_number, Complex_number); // still to implement
-Complex_number divide(Complex_number, Complex_number); // still to implement
+Complex_number add_standard_form(Complex_number, Complex_number);
+Complex_number subtract_standard_form(Complex_number, Complex_number); // still to implement
+Complex_number multiply_standard_form(Complex_number, Complex_number); // still to implement
+Complex_number divide_standard_form(Complex_number, Complex_number); // still to implement
 
 
 double format_argument(double);
@@ -41,6 +41,9 @@ Complex_number_polar_form get_power(Complex_number_polar_form, unsigned int);
 Complex_number_polar_form* get_roots(Complex_number_polar_form, unsigned int);
 Complex_number_polar_form from_standard_to_polar(Complex_number);
 
-Complex_number_polar_form multiply(Complex_number_polar_form, Complex_number_polar_form); // still to implement
+Complex_number_polar_form add_polar_form(Complex_number_polar_form, Complex_number_polar_form); // still to implement
+Complex_number_polar_form subtract_polar_form(Complex_number_polar_form, Complex_number_polar_form); // still to implement
+Complex_number_polar_form multiply_polar_form(Complex_number_polar_form, Complex_number_polar_form); // still to implement
+Complex_number_polar_form divide_polar_form(Complex_number_polar_form, Complex_number_polar_form); // still to implement
 
 #endif
