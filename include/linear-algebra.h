@@ -3,6 +3,7 @@
 
 #include <math.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 /*
    ____                      _                                   _                   
@@ -16,34 +17,34 @@
 typedef struct {
    double real_part;
    double imaginary_part;
-} Complex_number;
+} complex_number;
 
 typedef struct {
    double absolute_value;
    double argument;
-} Complex_number_polar_form;
+} complex_number_polar_form;
 
 
 
-Complex_number get_conjucate(Complex_number);
-double get_absolute_value(Complex_number);
-Complex_number get_multiplicative_inverse(Complex_number);
-Complex_number from_polar_to_standard(Complex_number_polar_form);
+complex_number get_conjucate(complex_number);
+double get_absolute_value(complex_number);
+complex_number get_multiplicative_inverse(complex_number);
+complex_number from_polar_to_standard(complex_number_polar_form);
 
-Complex_number add_standard_form(Complex_number, Complex_number);
-Complex_number subtract_standard_form(Complex_number, Complex_number); // still to implement
-Complex_number multiply_standard_form(Complex_number, Complex_number); // still to implement
-Complex_number divide_standard_form(Complex_number, Complex_number); // still to implement
+complex_number add_standard_form(complex_number, complex_number);
+complex_number subtract_standard_form(complex_number, complex_number);
+complex_number multiply_standard_form(complex_number, complex_number);
+complex_number divide_standard_form(complex_number, complex_number);
 
 
 double format_argument(double);
-Complex_number_polar_form get_power(Complex_number_polar_form, unsigned int);
-Complex_number_polar_form* get_roots(Complex_number_polar_form, unsigned int);
-Complex_number_polar_form from_standard_to_polar(Complex_number);
+complex_number_polar_form get_power(complex_number_polar_form, unsigned int);
+complex_number_polar_form* get_roots(complex_number_polar_form, unsigned int);
+complex_number_polar_form from_standard_to_polar(complex_number);
 
-Complex_number_polar_form add_polar_form(Complex_number_polar_form, Complex_number_polar_form); // still to implement
-Complex_number_polar_form subtract_polar_form(Complex_number_polar_form, Complex_number_polar_form); // still to implement
-Complex_number_polar_form multiply_polar_form(Complex_number_polar_form, Complex_number_polar_form); // still to implement
-Complex_number_polar_form divide_polar_form(Complex_number_polar_form, Complex_number_polar_form); // still to implement
+complex_number_polar_form add_polar_form(complex_number_polar_form, complex_number_polar_form);
+complex_number_polar_form subtract_polar_form(complex_number_polar_form, complex_number_polar_form);
+complex_number_polar_form multiply_polar_form(complex_number_polar_form, complex_number_polar_form);
+complex_number_polar_form divide_polar_form(complex_number_polar_form, complex_number_polar_form);
 
 #endif
