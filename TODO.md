@@ -1,2 +1,3 @@
-- [ ] implement other operations functions;
 - [ ] write all tests and check if the algorithms are right;
+- [ ] check for 0s in multiplicative inverse of complex numbers
+- [ ] define argument for complex number in polar form when real part and imaginary part are 0

@@ -16,25 +16,14 @@ double get_absolute_value(complex_number z) {
 
 complex_number get_multiplicative_inverse(complex_number z) {
    // z = a + bi => z^{-1} = conjucate(z) / (abs(z))^2
-   complex_number conjucate = get_conjucate(z);
-   double absolute_value = get_absolute_value(z);
-
+   // OR (faster)
+   // z = a + bi => z^{-1} = 1 / z
    complex_number multiplicative_inverse;
-   multiplicative_inverse.real_part = conjucate.real_part / pow(absolute_value, 2);
-   multiplicative_inverse.imaginary_part = conjucate.imaginary_part / pow(absolute_value, 2);
+   multiplicative_inverse = divide_standard_form((complex_number){1, 0}, z);
+
+   // I have to check for division by zero
 
    return multiplicative_inverse;
-}
-
-complex_number from_polar_to_standard(complex_number_polar_form z) {
-   complex_number standardized_form;
-
-   standardized_form.real_part = z.absolute_value * cos(z.argument * (3.14159/180));
-   standardized_form.real_part = round(standardized_form.real_part * 100.0) / 100.0; // round to 2 decimal places
-   standardized_form.imaginary_part = z.absolute_value * sin(z.argument * (3.14159/180));
-   standardized_form.imaginary_part = round(standardized_form.imaginary_part * 100.0) / 100.0; // round to 2 decimal places
-
-   return standardized_form;
 }
 
 complex_number add_standard_form(complex_number z1, complex_number z2) {
@@ -78,4 +67,15 @@ complex_number divide_standard_form(complex_number z1, complex_number z2) {
    divide_result.imaginary_part = numerator.imaginary_part / denominatore.real_part;
 
    return divide_result;
+}
+
+complex_number from_polar_to_standard(complex_number_polar_form z) {
+   complex_number standardized_form;
+
+   standardized_form.real_part = z.absolute_value * cos(z.argument * (3.14159/180));
+   standardized_form.real_part = round(standardized_form.real_part * 100.0) / 100.0; // round to 2 decimal places
+   standardized_form.imaginary_part = z.absolute_value * sin(z.argument * (3.14159/180));
+   standardized_form.imaginary_part = round(standardized_form.imaginary_part * 100.0) / 100.0; // round to 2 decimal places
+
+   return standardized_form;
 }

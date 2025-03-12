@@ -29,22 +29,23 @@ typedef struct {
 complex_number get_conjucate(complex_number);
 double get_absolute_value(complex_number);
 complex_number get_multiplicative_inverse(complex_number);
-complex_number from_polar_to_standard(complex_number_polar_form);
 
 complex_number add_standard_form(complex_number, complex_number);
 complex_number subtract_standard_form(complex_number, complex_number);
 complex_number multiply_standard_form(complex_number, complex_number);
 complex_number divide_standard_form(complex_number, complex_number);
 
+complex_number from_polar_to_standard(complex_number_polar_form);
 
 double format_argument(double);
 complex_number_polar_form get_power(complex_number_polar_form, unsigned int);
 complex_number_polar_form* get_roots(complex_number_polar_form, unsigned int);
-complex_number_polar_form from_standard_to_polar(complex_number);
 
 complex_number_polar_form add_polar_form(complex_number_polar_form, complex_number_polar_form);
 complex_number_polar_form subtract_polar_form(complex_number_polar_form, complex_number_polar_form);
 complex_number_polar_form multiply_polar_form(complex_number_polar_form, complex_number_polar_form);
 complex_number_polar_form divide_polar_form(complex_number_polar_form, complex_number_polar_form);
+
+complex_number_polar_form from_standard_to_polar(complex_number);
 
 #endif
